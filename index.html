@@ -27,10 +27,6 @@
         />
   </head>
   <body>
-    <script src="https://cdn.jsdelivr.net/npm/@farcaster/frame-sdk/dist/index.min.js"></script>
-        <script>
-            frame.sdk.actions.ready();
-        </script>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=424 height=705 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
@@ -146,5 +142,9 @@
       document.body.appendChild(script);
 
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/@farcaster/frame-sdk/dist/index.min.js"></script>
+        <script>
+            frame.sdk.actions.ready();
+        </script>
   </body>
 </html>
