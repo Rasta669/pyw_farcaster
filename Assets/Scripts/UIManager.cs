@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour
     public Sprite[] instructionSprites; // Array of instruction sprites
     private int currentInstructionIndex = 0; // Track current instruction sprite
     private bool showingInstructions = false; // Track if instructions are being shown
+    public static bool skipMainMenu = false;
 
     // Camera follow settings
     public float smoothSpeed = 0.125f; // How smooth the camera follows (lower = smoother but slower)
@@ -97,12 +98,12 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         // Find WalletConnectManager in the scene
-        walletConnectManager = FindObjectOfType<WalletConnectManager>();
-        //loadingDots = loadingDots.GetComponent<LoadingDots>();
-        if (walletConnectManager == null)
-        {
-            Debug.LogError("WalletConnectManager not found in the scene!");
-        }
+        //walletConnectManager = FindObjectOfType<WalletConnectManager>();
+        ////loadingDots = loadingDots.GetComponent<LoadingDots>();
+        //if (walletConnectManager == null)
+        //{
+        //    Debug.LogError("WalletConnectManager not found in the scene!");
+        //}
 
         //Camera.main.rect = new Rect(0f, 0.33f, 1f, 0.34f); // Show only the middle 34%
 
@@ -123,20 +124,28 @@ public class GameManager : MonoBehaviour
         {
 
             AudioManager.Instance.PlayMenuMusic();
-            
-            // Normal start: show login canvas only
-            loginCanvas.gameObject.SetActive(true);
-            mainMenuCanvas.gameObject.SetActive(false);
-            pauseMenu.gameObject.SetActive(false);
-            resumeMenu.gameObject.SetActive(false);
-            gameOverMenu.gameObject.SetActive(false);
-            HTPCanvas.gameObject.SetActive(false);
-            LoadingCanvas.gameObject.SetActive(false);
             if (instructionCanvas != null)
             {
                 instructionCanvas.gameObject.SetActive(false);
             }
-            Time.timeScale = 0f;
+            // Normal start: show login canvas only
+            if (skipMainMenu)
+            {
+                Debug.Log("Restarting game: skipping menu and instructions");
+                skipMainMenu = false; // reset it
+                StartGame();
+            }
+            else
+            {
+                // First-time play: show main menu and wait for start
+                mainMenuCanvas.gameObject.SetActive(true);
+                pauseMenu.gameObject.SetActive(false);
+                resumeMenu.gameObject.SetActive(false);
+                gameOverMenu.gameObject.SetActive(false);
+                HTPCanvas.gameObject.SetActive(false);
+                Time.timeScale = 0f;
+            }
+            
             
 
             // Add initial canvas to stack
@@ -290,6 +299,12 @@ public class GameManager : MonoBehaviour
         {
             mainMenuCanvas.gameObject.SetActive(false);
         }
+
+        if (skipMainMenu)
+        {
+            StartGame(); // Skip instructions too on restart
+            return;
+        }
         if (instructionCanvas != null)
         {
             showingInstructions = true;
@@ -331,12 +346,13 @@ public class GameManager : MonoBehaviour
 
         totalXP = 0; // Reset XP on new game
         UpdateXPText();
-        UpdatePauseMenuWalletInfo();
+        //UpdatePauseMenuWalletInfo();
 
         // Start the game
         Time.timeScale = 1f;
         isGameStarted = true;
         //shouldStartImmediately = false; // Reset the flag
+        skipMainMenu = false;
     }
 
 
@@ -457,8 +473,16 @@ public class GameManager : MonoBehaviour
 
     void Restart()
     {
-        // Set flag to start immediately after reload
-        //shouldStartImmediately = false;
+        skipMainMenu = true;
+        Time.timeScale = 1f;
+
+        if (player != null)
+        {
+            var input = player.GetComponent<UnityEngine.InputSystem.PlayerInput>();
+            if (input != null)
+                input.enabled = false;
+        }
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
