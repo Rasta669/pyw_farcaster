@@ -1614,7 +1614,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.4100485, y: 19.527983}
+  m_AnchoredPosition: {x: -4.4100485, y: -25.47202}
   m_SizeDelta: {x: 436.8918, y: 95.142}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &121356683
@@ -4257,7 +4257,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &335176750
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4475,7 +4475,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 48, y: 33.35044}
+  m_AnchoredPosition: {x: 48, y: -11.64956}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &347725142
@@ -4685,7 +4685,7 @@ MonoBehaviour:
   obstaclePrefab: {fileID: 2941023152248006574, guid: 83c35492974602b488bead7129c31408, type: 3}
   player: {fileID: 195872062}
   firstSpawnXDistance: 15
-  spawnYHeight: 7.3
+  spawnYHeight: 6.5
   spawnXSpacing: 30
   spawnInterval: 25
   obstacleLifetime: 60
@@ -7258,7 +7258,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 410}
+  m_AnchoredPosition: {x: 0, y: 372}
   m_SizeDelta: {x: 100.69678, y: -664.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &568477949
@@ -7482,7 +7482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1677270613564587909, guid: f60254cff66d257459a302e51aaf5e16, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -71.472084
+      value: -116.47209
       objectReference: {fileID: 0}
     - target: {fileID: 1677270613564587909, guid: f60254cff66d257459a302e51aaf5e16, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -14280,7 +14280,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1123478328
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18943,7 +18943,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: 99}
+  m_AnchoredPosition: {x: -1, y: 54.000004}
   m_SizeDelta: {x: 698.048, y: 98.9372}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1550951190
@@ -21603,7 +21603,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -413.5996}
+  m_AnchoredPosition: {x: 0, y: -458.5996}
   m_SizeDelta: {x: 0, y: -684.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1731515873
@@ -23739,7 +23739,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.5067, y: -2}
+  m_AnchoredPosition: {x: -6.5067, y: -47}
   m_SizeDelta: {x: 28.4711, y: 31.448}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1919713008
@@ -24190,7 +24190,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 391.35043}
+  m_AnchoredPosition: {x: 0, y: 346.35043}
   m_SizeDelta: {x: 0, y: -679.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1953952573

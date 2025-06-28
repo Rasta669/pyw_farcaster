@@ -6,33 +6,10 @@
     <title>Unity Web Player | Paint Your World</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-
-    <!-- Farcaster Mini App metadata -->
-    <meta
-            property="fc:frame"
-            content='{
-                "version": "next",
-                "imageUrl": "https://blush-gigantic-asp-235.mypinata.cloud/ipfs/bafkreig4j5pozx3zjo7se764cs5emrqqvxlx6re34x2c4zof5wnfz2i5wa",
-                "button": {
-                    "title": "Play Game",
-                    "action": {
-                        "type": "launch_frame",
-                        "name": "Paint Your World",
-                        "url": "https://pyw-farcaster.vercel.app/",
-                        "splashImageUrl": "https://blush-gigantic-asp-235.mypinata.cloud/ipfs/bafkreihbwdsntczzmvesv7s5b5kuhng3b6vcri2u7pcewfb4zexa7p5yoy",
-                        "splashBackgroundColor": "#000000"
-                    }
-                }
-            }'
-        />
   </head>
   <body>
-    <script src="https://cdn.jsdelivr.net/npm/@farcaster/frame-sdk/dist/index.min.js"></script>
-        <script>
-            frame.sdk.actions.ready();
-        </script>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=424 height=705 tabindex="-1"></canvas>
+      <canvas id="unity-canvas" width=420 height=695 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -121,8 +98,8 @@
 
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-        canvas.style.width = "424px";
-        canvas.style.height = "705px";
+        canvas.style.width = "420px";
+        canvas.style.height = "695px";
       }
 
       document.querySelector("#unity-loading-bar").style.display = "block";
