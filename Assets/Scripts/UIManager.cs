@@ -447,7 +447,7 @@ public class GameManager : MonoBehaviour
         UpdateGOMenuWalletInfo();
         Debug.Log("Game Over: Updating wallet info");
         Debug.Log("Submitting score...");
-        await SubmitScore();
+        //await SubmitScore();
         Debug.Log("Score submitted successfully");
         Debug.Log("Fetching top players...");
         
