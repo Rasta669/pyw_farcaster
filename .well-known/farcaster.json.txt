@@ -1,12 +1,20 @@
 {
   "frame": {
-    "version": "1",
     "name": "Paint Your World",
-    "iconUrl": "https://github.com/Undiscoveredgoats/pyw_mobile/blob/main/docs/TemplateData/favicon.ico",
-    "homeUrl": "https://undiscoveredgoats.github.io/pyw_farcaster/",
-    "screenshotUrls": ["https://rasta669.github.io/PYW_host/TemplateData/thumbnail.png"],
-    "tags": ["game", "unity"],
+    "version": "1",
+    "iconUrl": "https://blush-gigantic-asp-235.mypinata.cloud/ipfs/bafkreihbwdsntczzmvesv7s5b5kuhng3b6vcri2u7pcewfb4zexa7p5yoy",
+    "homeUrl": "https://pyw-farcaster.vercel.app",
+    "imageUrl": "https://blush-gigantic-asp-235.mypinata.cloud/ipfs/bafkreihbwdsntczzmvesv7s5b5kuhng3b6vcri2u7pcewfb4zexa7p5yoy",
+    "splashImageUrl": "https://blush-gigantic-asp-235.mypinata.cloud/ipfs/bafkreihbwdsntczzmvesv7s5b5kuhng3b6vcri2u7pcewfb4zexa7p5yoy",
+    "splashBackgroundColor": "#000000",
+    "webhookUrl": "https://pyw-farcaster.vercel.app/api/webhook",
+    "subtitle": "Create your own path",
     "primaryCategory": "games",
-    "splashImageUrl": "https://github.com/Undiscoveredgoats/pyw_mobile/blob/main/docs/TemplateData/webgl-logo.png"
+    "description": "Many platformers are rigid. Here, players literally paint their own path. Every decision—color choice, stroke placement—changes how they experience the level."
+  },
+  "accountAssociation": {
+    "header": "eyJmaWQiOjg2NDk4MCwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweEFiNDBjRERiZjJGMDBFNDYwOTRCQzhFZmNlMWEwMEQzZEJhYTE3MTQifQ",
+    "payload": "eyJkb21haW4iOiJweXctZmFyY2FzdGVyLnZlcmNlbC5hcHAifQ",
+    "signature": "MHgwNGM1ZGM2YWUzNGZmMjY2NjhmZWExMzE2ZGYyZDVmZTE0OGFlNTgzY2Q5NzljNjk1YzZjMjg4MjlkOTNjNTk1MGJhZmM3OWViMGFhOWM5NGZiNWJjYjZmMmI2OWI0ZjU1YzA1MWJjODgyYmZiZjcxOGU0YTY0MDg3MWVjMzZhZDFi"
   }
 }
